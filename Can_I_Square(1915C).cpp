@@ -6,32 +6,25 @@ using namespace std;
 
 
      cin>>t;
+     cin.ignore();
 
      while(t--)
      {
-         int n;
-        cin>>n;
+         long long n,k;
+             cin>>n>>k;
+         string s="";
 
-        vector<int> arr(n);
+         for(char i='a';i<'a'+k; i++)
+         {
+             s+=i;
 
-        for(int i=0; i<n; i++)
-        {
-            cin>>arr[i];
-        }
-        double sum=0;
-        for(int i=0; i<n; i++)
-        {
-            sum+=arr[i];
-        }
-        double a =sqrt(sum);
-        if (a == static_cast<int>(a)) {
-        cout << "Yes" << endl;
-    } else {
-      cout << "No" << endl;
-    }
+         }
+         for(int i=0; i<n; i++){
+            cout<<s;
+         }
+cout<<endl;
+
      }
-
-
-
+    return 0;
  }
 
